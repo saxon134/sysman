@@ -310,7 +310,7 @@ func TaskSave(c *api.Context) (res *api.Response, err error) {
 	}
 
 	//保存数据
-	err = sm.MySql.Save(in).Error
+	err = sm.MySql.Save(in.TblTask).Error
 	if err != nil {
 		return nil, saError.New(err)
 	}
